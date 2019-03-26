@@ -17,7 +17,7 @@ import (
 func TestNewClient(t *testing.T) {
 	c := NewClient(nil)
 
-	if got, want := c.baseURL.String(), sandboxURL; got != want {
+	if got, want := c.baseURL.String(), SandboxURL; got != want {
 		t.Errorf("client should use default url: got %s, want %s", got, want)
 	}
 
@@ -95,7 +95,7 @@ func TestNewRequest(t *testing.T) {
 			st.Fatalf("unexpected error: got %v", err)
 		}
 
-		if got, want := req.URL.String(), sandboxURL+path; got != want {
+		if got, want := req.URL.String(), SandboxURL+path; got != want {
 			st.Errorf("invalid path: got %s, want %s", got, want)
 		}
 

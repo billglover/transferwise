@@ -13,8 +13,8 @@ import (
 )
 
 const (
-	liveURL    = "https://api.transferwise.com"
-	sandboxURL = "https://api.sandbox.transferwise.tech"
+	LiveURL    = "https://api.transferwise.com"
+	SandboxURL = "https://api.sandbox.transferwise.tech"
 	userAgent  = "github.com/billglover/transferwise"
 )
 
@@ -34,7 +34,7 @@ func NewClient(c *http.Client) *Client {
 		c = http.DefaultClient
 	}
 
-	baseURL, _ := url.Parse(sandboxURL)
+	baseURL, _ := url.Parse(SandboxURL)
 
 	return &Client{baseURL: baseURL, userAgent: userAgent, client: c}
 }
