@@ -33,8 +33,8 @@ func TestNewClientWithOptions(t *testing.T) {
 	userAgent := "dummy user agent"
 
 	opts := ClientOptions{
-		baseURL:   baseURL,
-		userAgent: userAgent,
+		BaseURL:   baseURL,
+		UserAgent: userAgent,
 	}
 	c := NewClientWithOptions(nil, opts)
 

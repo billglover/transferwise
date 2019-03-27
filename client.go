@@ -41,16 +41,16 @@ func NewClient(c *http.Client) *Client {
 
 // ClientOptions provides a set of options that can be used to configure the Client.
 type ClientOptions struct {
-	baseURL   *url.URL
-	userAgent string
+	BaseURL   *url.URL
+	UserAgent string
 }
 
 // NewClientWithOptions takes ClientOptions, configures and returns a new client.
 func NewClientWithOptions(c *http.Client, opts ClientOptions) *Client {
 	client := NewClient(c)
 
-	client.baseURL = opts.baseURL
-	client.userAgent = opts.userAgent
+	client.baseURL = opts.BaseURL
+	client.userAgent = opts.UserAgent
 
 	return client
 }
